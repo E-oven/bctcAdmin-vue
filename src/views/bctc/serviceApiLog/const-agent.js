@@ -1,0 +1,150 @@
+export default {
+  height:'auto',
+  calcHeight: 30,
+  tip: false,
+  searchShow: true,
+  border: true,
+  index: true,
+  viewBtn: true,
+  selection: true,
+  dialogClickModal: false,
+  labelWidth: 140,
+  searchLabelWidth: 100,
+  searchMenuSpan: 5,
+  searchSpan: 6,
+  searchMenuPosition: 'left',
+  menuWidth: 90,
+  addBtn: false,
+  editBtn: false,
+  delBtn: false,
+
+
+  column: [
+    {
+      label: "ID",
+      prop: "id",
+      type: "input",
+      align: "center",
+      overHidden: true,
+      hide: true,
+      viewDisplay: false,
+    },
+
+    {
+      width: 200,
+      label: "采集时间",
+      prop: "createTime",
+      type: "datetime",
+      searchRange: true,
+      align: "center",
+      overHidden: true,
+      valueFormat:'yyyy-MM-dd HH:mm:ss',
+      search: true
+    },
+    {
+      label: "通道号",
+      prop: "chanelName2",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "通道名称",
+      prop: "chanelName",
+      type: "select",
+      align: "center",
+      dicUrl: "/api/blade-system/dict-biz/dictionary?code=biz_CHANNEL",
+      props: {
+        label: "dictValue",
+        value: "dictKey"
+      },
+      overHidden: true,
+      search: true
+    },
+    {
+      label: "进出类型",
+      prop: "ioFlag",
+      type: "select",
+      align: "center",
+      dicUrl: "/api/blade-system/dict-biz/dictionary?code=biz_EO_MODE",
+      props: {
+        label: "dictValue",
+        value: "dictKey"
+      },
+      overHidden: true,
+    },
+    {
+      label: "车牌号",
+      prop: "plate",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "车牌颜色",
+      prop: "plateColor",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "箱数量",
+      prop: "contaCount",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "前箱号",
+      prop: "contaIdFont",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "前箱型",
+      prop: "contaIsoFont",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "后箱号",
+      prop: "contaIdBack",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "后箱型",
+      prop: "contaIsoBack",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "本机IP",
+      prop: "localIp",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+
+    {
+      label: "端口号",
+      prop: "localPort",
+      type: "input",
+      align: "center",
+      overHidden: true,
+    },
+    {
+      label: "参数报文",
+      prop: "params",
+      type: "textarea",
+      align: "center",
+      overHidden: true,
+      hide: true,
+      span: 24,
+    },
+  ]
+}
